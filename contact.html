@@ -181,6 +181,29 @@
 
 			marker.addListener('click', function() {
 				infowindow.open(map, marker);
+            });
+            
+            var shelterTwoPosition = {lat: 43.856234,lng: -79.391934};
+			var markerTwo = new google.maps.Marker({
+				position: shelterTwoPosition,
+				map: map,
+				title: 'Store Location #2 - Richmond Hill'
+		});
+			var contentStringTwo = '<div id="content"><h1>Store Location #1 - Richmond Hill</h1><p>Yellow Brick House:<br>' +
+                'A place of healing, empowerment, and refuge for women and their children who are survivors of violence and abuse.<br>' +
+                '940 Sheppard Avenue West<br>'+
+                'Toronto, ON<br>'+
+                'M3H 2T6<br>'+
+				'Shelter Number : 416.635.9427<br>' +
+				'General Inquiries: 416.638.7335<br>' +
+				'http://nyws.ca/e</a></p></div>';
+
+			var infowindowTwo = new google.maps.InfoWindow({
+				content: contentStringTwo
+			});
+
+			markerTwo.addListener('click', function() {
+				infowindowTwo.open(map, marker);
 			});
 		}
                    
