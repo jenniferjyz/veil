@@ -57,38 +57,38 @@
                                         <li><a href="index.html">Home</a></li> 
                                         <li><a href="shop.html">shop</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="blog.html">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Elements</a></li>
-                                                <li><a href="product_details.html">Product Details</a></li>
-                                            </ul>
-                                        </li>
+<<<<<<< HEAD
+                                        <li><a href="contact.html">Find Stores</a></li>
+=======
                                         <li><a href="contact.html">Contact</a></li>
+>>>>>>> 052e5ed01c7f5042cd0d1455d3cd86ddba16e297
                                     </ul>
                                 </nav>
                             </div>   
                         </div>
                         <div class="header-right1 d-flex align-items-center">
+<<<<<<< HEAD
                             <!-- Social -->
                             <div class="header-social d-none d-md-block">
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
                             </div>
+                            <!-- Cart Box -->
+                            <div class="search d-none d-md-block">
+                                <ul class="d-flex align-items-center">
+                                    <li>
+                                        <div class="card-stor">
+                                            <img src="assets/img/gallery/card.svg" alt="">
+                                            <span>0</span>
+=======
                             <!-- Search Box -->
                             <div class="search d-none d-md-block">
                                 <ul class="d-flex align-items-center">
                                     <li class="mr-15">
                                         <div class="nav-search search-switch">
                                             <i class="ti-search"></i>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="card-stor">
-                                            <img src="assets/img/gallery/card.svg" alt="">
-                                            <span>0</span>
+>>>>>>> 052e5ed01c7f5042cd0d1455d3cd86ddba16e297
                                         </div>
                                     </li>
                                 </ul>
@@ -104,6 +104,7 @@
         </div>
         <!-- Header End -->
     </header>
+    <!-- header end -->
     <main>
         <!-- breadcrumb Start-->
         <div class="page-notification page-notification2">
@@ -136,10 +137,10 @@
                             var grayStyles = [{
                                 featureType: "all",
                                 stylers: [{
-                                    saturation: -90
+                                    saturation: 50
                                 },
                                 {
-                                    lightness: 50
+                                    lightness: 0
                                 }
                                 ]
                             },
@@ -152,16 +153,39 @@
                             ];
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 center: {
-                                    lat: -31.197,
-                                    lng: 150.744
+                                    lat: 43.642745,
+                                    lng: -79.387078
                                 },
                                 zoom: 9,
-                                styles: grayStyles,
                                 scrollwheel: false
                             });
-                        }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
+
+                            var shelterOnePosition = {lat: 43.751527,lng: -79.459240};
+			var marker = new google.maps.Marker({
+				position: shelterOnePosition,
+				map: map,
+				title: 'Store Location #1 - North York'
+		});
+			var contentString = '<div id="content"><h1>Store Location #1 - North York</h1><p>North York Womens Shelter:<br>' +
+                'A place of healing, empowerment, and refuge for women and their children who are survivors of violence and abuse.<br>' +
+                '940 Sheppard Avenue West<br>'+
+                'Toronto, ON<br>'+
+                'M3H 2T6<br>'+
+				'Shelter Number : 416.635.9427<br>' +
+				'General Inquiries: 416.638.7335<br>' +
+				'http://nyws.ca/e</a></p></div>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		}
+                   
+                   </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKdQJhvRskGFOgauBE7572s5eEXAsoLcs&callback=initMap" async defer></script>
                     </script>
                     
                 </div>
@@ -227,82 +251,6 @@
         <!-- Contact Area End -->
     </main>
     <footer>
-        <!-- Footer Start-->
-        <div class="footer-area footer-padding">
-            <div class="container-fluid ">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
-                     <div class="single-footer-caption mb-50">
-                       <div class="single-footer-caption mb-30">
-                          <!-- logo -->
-                          <div class="footer-logo mb-35">
-                           <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                       </div>
-                       <div class="footer-tittle">
-                           <div class="footer-pera">
-                               <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
-                           </div>
-                       </div>
-                       <!-- social -->
-                       <div class="footer-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>Quick links</h4>
-                    <ul>
-                        <li><a href="#">Image Licensin</a></li>
-                        <li><a href="#">Style Guide</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>Shop Category</h4>
-                    <ul>
-                        <li><a href="#">Image Licensin</a></li>
-                        <li><a href="#">Style Guide</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>Pertners</h4>
-                    <ul>
-                        <li><a href="#">Image Licensin</a></li>
-                        <li><a href="#">Style Guide</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>Get in touch</h4>
-                    <ul>
-                        <li><a href="#">(89) 982-278 356</a></li>
-                        <li><a href="#">demo@colorlib.com</a></li>
-                        <li><a href="#">67/A, Colorlib, Green road, NYC</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 <!-- footer-bottom area -->
 <div class="footer-bottom-area">
     <div class="container">
