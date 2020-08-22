@@ -169,14 +169,13 @@
 				map: map,
 				title: 'Store Location #2 - Richmond Hill'
 		});
-			var contentStringTwo = '<div id="content"><h1>Store Location #1 - Richmond Hill</h1><p>Yellow Brick House:<br>' +
-                'A place of healing, empowerment, and refuge for women and their children who are survivors of violence and abuse.<br>' +
-                '940 Sheppard Avenue West<br>'+
-                'Toronto, ON<br>'+
-                'M3H 2T6<br>'+
-				'Shelter Number : 416.635.9427<br>' +
-				'General Inquiries: 416.638.7335<br>' +
-				'http://nyws.ca/e</a></p></div>';
+			var contentStringTwo = '<div id="content"><h1>Store Location #2 - Richmond Hill</h1><p>Yellow Brick House:<br>' +
+                'Yellow Brick House is a place for abused women and children in York Region.<br>' +
+                '52 West Beaver Creek Rd #4<br>'+
+                'Richmond Hill, ON<br>'+ 
+                'L4B 1L9<br>'+
+				'Shelter Number/Crisis Line : 1-800-263-3247<br>' +
+				'https://www.yellowbrickhouse.org</a></p></div>';
 
 			var infowindowTwo = new google.maps.InfoWindow({
 				content: contentStringTwo
@@ -184,6 +183,118 @@
 
 			markerTwo.addListener('click', function() {
 				infowindowTwo.open(map, marker);
+            });
+            
+            var shelterThreePosition = {lat: 43.65942,lng: -79.3724304};
+			var markerThree = new google.maps.Marker({
+				position: shelterThreePosition,
+				map: map,
+				title: 'Store Location #3 - Toronto'
+		});
+			var contentStringThree = '<div id="content"><h1>Store Location #3 - Toronto</h1><p>Street Haven at the Crossroads:<br>' +
+                'Street Haven at the Crossroads offers pathways for women experiencing or at risk of homelessness, through a variety of integrated services.<br>' +
+                '87 Pembroke St<br>'+
+                'Toronto, ON <br>'+
+                'M5A 2N9<br>'+
+                'Shelter Number : 1(416) 967-6060<br>'+
+                'Toll Free. 1-844-967-6060<br>' +
+				'https://www.streethaven.org/</a></p></div>';
+
+			var infowindowThree = new google.maps.InfoWindow({
+				content: contentStringThree
+			});
+
+			markerThree.addListener('click', function() {
+				infowindowThree.open(map, marker);
+            });
+            
+            var shelterFourPosition = {lat: 43.656630,lng: -79.338007};
+			var markerFour = new google.maps.Marker({
+				position: shelterFourPosition,
+				map: map,
+				title: 'Store Location #4 - Toronto'
+		});
+			var contentStringFour = '<div id="content"><h1>Store Location #4 - Toronto</h1><p>Red Door Shelter:<br>' +
+                'When families have nowhere else to turn, they can find sanctuary and support at the Red Door - moms who have bravely fled abuse to keep their kids safe, refugees seeking sanctuary from war and violence, and families in crisis with nowhere else to go.<br>' +
+                '21 Carlaw Avenue<br>'+
+                'Toronto, ON <br>'+
+                'M4M 2R6<br>'+
+                'Shelter Number : 416-915-5671<br>'+
+				'https://www.reddoorshelter.ca/</a></p></div>';
+
+			var infowindowFour = new google.maps.InfoWindow({
+				content: contentStringFour
+			});
+
+			markerFour.addListener('click', function() {
+				infowindowFour.open(map, marker);
+            });
+            
+            var shelterFivePosition = {lat: 43.927576,lng: -80.100359};
+			var markerFive = new google.maps.Marker({
+				position: shelterFivePosition,
+				map: map,
+				title: 'Store Location #5 - Orangeville'
+		});
+			var contentStringFive = '<div id="content"><h1>Store Location #5 - Orangeville</h1><p>Family Transition Place:<br>' +
+                'Family Transition Place (FTP) has been providing critical services to women and their children who have experienced abuse and unhealthy relationships. Inside FTP’s doors, women find a warm and welcoming place where their safety and well-being is the most important thing in the world.<br>' +
+                '20 Bredin Parkway<br>'+
+                'Orangeville, ON <br>'+
+                'L9W 4Z9<br>'+
+                'Shelter Number : 519-941-HELP(4357)<br>'+
+                '1-800-265-9178<br>'+
+				'https://familytransitionplace.ca/</a></p></div>';
+
+			var infowindowFive = new google.maps.InfoWindow({
+				content: contentStringFive
+			});
+
+			markerFive.addListener('click', function() {
+				infowindowFive.open(map, marker);
+            });
+            
+            var shelterSixPosition = {lat: 43.651051,lng: -79.375249};
+			var markerSix = new google.maps.Marker({
+				position: shelterSixPosition,
+				map: map,
+				title: 'Store Location #6 - Toronto'
+		});
+			var contentStringSix = '<div id="content"><h1>Store Location #6 - Toronto</h1><p>Adelaide Resource Centre for Women:<br>' +
+                'The Adelaide Resource Centre for Women offers a safe, welcoming place for all women. The goal is to aid women who are homeless, socially alone and isolated, or in need of assistance.<br>' +
+                '67 Adelaide St. E<br>'+
+                'Toronto, ON <br>'+
+                'M5C 1K6<br>'+
+                'Shelter Number : 416-392-9243<br>'+
+				'https://ccgsd-ccdgs.org/community_advisor/adelaide-resource-centre-for-women/</a></p></div>';
+
+			var infowindowSix = new google.maps.InfoWindow({
+				content: contentStringSix
+			});
+
+			markerSix.addListener('click', function() {
+				infowindowSix.open(map, marker);
+            });
+            
+            var shelterSevenPosition = {lat: 44.032504,lng: -79.475586};
+			var markerSeven = new google.maps.Marker({
+				position: shelterSevenPosition,
+				map: map,
+				title: 'Store Location #7 - New Market'
+		});
+			var contentStringSeven = '<div id="content"><h1>Store Location #7 - Newmarket</h1><p>Belindas Place:<br>' +
+                'Belinda’s Place is York Region’s only multi-service site for single homeless women.<br>' +
+                '16580 Yonge St.<br>'+
+                'Newmarket, ON <br>'+
+                'L3X 2N8<br>'+
+                'Shelter Number : (289) 366-4673<br>'+
+				'http://belindas.nextmp.net/</a></p></div>';
+
+			var infowindowSeven = new google.maps.InfoWindow({
+				content: contentStringSeven
+			});
+
+			markerSeven.addListener('click', function() {
+				infowindowSeven.open(map, marker);
 			});
 		}
                    
