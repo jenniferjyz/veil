@@ -116,10 +116,10 @@
                             var grayStyles = [{
                                 featureType: "all",
                                 stylers: [{
-                                    saturation: -90
+                                    saturation: 50
                                 },
                                 {
-                                    lightness: 50
+                                    lightness: 0
                                 }
                                 ]
                             },
@@ -132,16 +132,39 @@
                             ];
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 center: {
-                                    lat: -31.197,
-                                    lng: 150.744
+                                    lat: 43.642745,
+                                    lng: -79.387078
                                 },
                                 zoom: 9,
-                                styles: grayStyles,
                                 scrollwheel: false
                             });
-                        }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
+
+                            var shelterOnePosition = {lat: 43.751527,lng: -79.459240};
+			var marker = new google.maps.Marker({
+				position: shelterOnePosition,
+				map: map,
+				title: 'Store Location #1 - North York'
+		});
+			var contentString = '<div id="content"><h1>Store Location #1 - North York</h1><p>North York Womens Shelter:<br>' +
+                'A place of healing, empowerment, and refuge for women and their children who are survivors of violence and abuse.<br>' +
+                '940 Sheppard Avenue West<br>'+
+                'Toronto, ON<br>'+
+                'M3H 2T6<br>'+
+				'Shelter Number : 416.635.9427<br>' +
+				'General Inquiries: 416.638.7335<br>' +
+				'http://nyws.ca/e</a></p></div>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		}
+                   
+                   </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKdQJhvRskGFOgauBE7572s5eEXAsoLcs&callback=initMap" async defer></script>
                     </script>
                     
                 </div>
